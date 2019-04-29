@@ -1,0 +1,2240 @@
+{
+  "contractName": "AddressEnumerationLibMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "Debug",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "address"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "address"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "address"
+        }
+      ],
+      "name": "getNextId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "itemsCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "address"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_ids",
+          "type": "address[]"
+        }
+      ],
+      "name": "statuses",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_id\",\"type\":\"address\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_id\",\"type\":\"address\"}],\"name\":\"remove\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ids\",\"type\":\"address[]\"}],\"name\":\"statuses\",\"outputs\":[{\"name\":\"\",\"type\":\"bool[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"address\"}],\"name\":\"getNextId\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"itemsCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"address\"}],\"name\":\"exists\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"text\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"Debug\",\"type\":\"event\"}],\"devdoc\":{\"author\":\"Ihor Borysyuk Igor Dulger\",\"details\":\"Mock contract to test List library. All docs are into origin library.\",\"methods\":{},\"title\":\"ListMock\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/work/room2read/contracts/libs/mocks/AddressEnumerationMock.sol\":\"AddressEnumerationLibMock\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/work/room2read/contracts/libs/AddressEnumerationLib.sol\":{\"keccak256\":\"0xf536367953d1b6acf1ed6209632829abcbdd4b4d2e7f8ac932345904b6a019c7\",\"urls\":[\"bzzr://74a942cd419c1720a7873adf6d742f4a8c948aca65840e5cdde2767bb88e6d8e\"]},\"/work/room2read/contracts/libs/mocks/AddressEnumerationMock.sol\":{\"keccak256\":\"0x8e657ad20e2639003afba5bc776350e240f0ccebcb648defed218d3c48bb8ee6\",\"urls\":[\"bzzr://c9186d59353745dbf25d59638b992afe0cabc6d4a96884dcd8ae63edf9697553\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x965012d27b4262d7a41f5028cbb30c51ebd9ecd4be8fb30380aaa7a3c64fbc8b\",\"urls\":[\"bzzr://41ca38f6b0fa4b77b0feec43e422cfbec48b7eb38a41edf0b85c77e8d9a296b1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506108bd806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630a3b0a4f1461006757806329092d0e1461008f5780635ef73440146100b5578063aec1b18f14610175578063e2c03ace146101b7578063f6a3d24e146101d1575b600080fd5b61008d6004803603602081101561007d57600080fd5b50356001600160a01b031661020b565b005b61008d600480360360208110156100a557600080fd5b50356001600160a01b031661021f565b610125600480360360208110156100cb57600080fd5b8101906020810181356401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184602083028401116401000000008311171561011a57600080fd5b509092509050610230565b60408051602080825283518183015283519192839290830191858101910280838360005b83811015610161578181015183820152602001610149565b505050509050019250505060405180910390f35b61019b6004803603602081101561018b57600080fd5b50356001600160a01b031661027e565b604080516001600160a01b039092168252519081900360200190f35b6101bf610290565b60408051918252519081900360200190f35b6101f7600480360360208110156101e757600080fd5b50356001600160a01b03166102a2565b604080519115158252519081900360200190f35b61021c60008263ffffffff6102b416565b50565b61021c60008263ffffffff6103b716565b606061027583838080602002602001604051908101604052809392919081815260200183836020028082843760009201829052509392505063ffffffff61056f169050565b90505b92915050565b6000610278818363ffffffff61063916565b600061029c6000610769565b90505b90565b6000610278818363ffffffff61077016565b806001600160a01b0381166103135760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b828261031f8282610770565b15801561033457506001600160a01b03811615155b61037257604051600160e51b62461bcd0281526004018080602001828103825260218152602001806108716021913960400191505060405180910390fd5b505050600180830180546001600160a01b03909316600081815260209586526040812085905592840182559082529290200180546001600160a01b0319169091179055565b806001600160a01b0381166104165760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826104228282610770565b8061043457506001600160a01b038116155b6104885760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60018501546001600160a01b0385166000908152602087905260409020546000199091019080821461052a5760008760010183815481106104c557fe5b6000918252602090912001546001890180546001600160a01b0390921692508291849081106104f057fe5b600091825260208083209190910180546001600160a01b0319166001600160a01b0394851617905592909116815290889052604090208190555b6001600160a01b0386166000908152602088905260408120556001808801546105589163ffffffff6107e016565b6105656001890182610807565b5050505050505050565b606060328251106105b457604051600160e51b62461bcd02815260040180806020018281038252602281526020018061084f6022913960400191505060405180910390fd5b606082516040519080825280602002602001820160405280156105e1578160200160208202803883390190505b50905060005b83518110156106315761060d8585838151811061060057fe5b6020026020010151610770565b82828151811061061957fe5b911515602092830291909101909101526001016105e7565b509392505050565b600082826106478282610770565b8061065957506001600160a01b038116155b6106ad5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b6001600160a01b03841660009081526020869052604090205460018601546106dc82600263ffffffff6107f516565b11156106ec576000935050610761565b6001600160a01b0385161561073757856001016107136001836107f590919063ffffffff16565b8154811061071d57fe5b6000918252602090912001546001600160a01b031661075d565b8560010160008154811061074757fe5b6000918252602090912001546001600160a01b03165b9350505b505092915050565b6001015490565b6001820154600090156107d8576001600160a01b03821660008181526020859052604090205460018501805490919081106107a757fe5b6000918252602090912001546001600160a01b03161480156107d157506001600160a01b03821615155b9050610278565b506000610278565b6000828211156107ef57600080fd5b50900390565b60008282018381101561027557600080fd5b81548183558181111561082b5760008381526020902061082b918101908301610830565b505050565b61029f91905b8082111561084a5760008155600101610836565b509056fe5374617475732061727261792063616e2774206265206d6f7265207468616e203530746869732069642073686f756c64204e4f542065786973747320696e206c697374a165627a7a72305820879ff1bca096558014292963de1b6066283a169bd442c52c0c4270977932c2fe0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80630a3b0a4f1461006757806329092d0e1461008f5780635ef73440146100b5578063aec1b18f14610175578063e2c03ace146101b7578063f6a3d24e146101d1575b600080fd5b61008d6004803603602081101561007d57600080fd5b50356001600160a01b031661020b565b005b61008d600480360360208110156100a557600080fd5b50356001600160a01b031661021f565b610125600480360360208110156100cb57600080fd5b8101906020810181356401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184602083028401116401000000008311171561011a57600080fd5b509092509050610230565b60408051602080825283518183015283519192839290830191858101910280838360005b83811015610161578181015183820152602001610149565b505050509050019250505060405180910390f35b61019b6004803603602081101561018b57600080fd5b50356001600160a01b031661027e565b604080516001600160a01b039092168252519081900360200190f35b6101bf610290565b60408051918252519081900360200190f35b6101f7600480360360208110156101e757600080fd5b50356001600160a01b03166102a2565b604080519115158252519081900360200190f35b61021c60008263ffffffff6102b416565b50565b61021c60008263ffffffff6103b716565b606061027583838080602002602001604051908101604052809392919081815260200183836020028082843760009201829052509392505063ffffffff61056f169050565b90505b92915050565b6000610278818363ffffffff61063916565b600061029c6000610769565b90505b90565b6000610278818363ffffffff61077016565b806001600160a01b0381166103135760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b828261031f8282610770565b15801561033457506001600160a01b03811615155b61037257604051600160e51b62461bcd0281526004018080602001828103825260218152602001806108716021913960400191505060405180910390fd5b505050600180830180546001600160a01b03909316600081815260209586526040812085905592840182559082529290200180546001600160a01b0319169091179055565b806001600160a01b0381166104165760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826104228282610770565b8061043457506001600160a01b038116155b6104885760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60018501546001600160a01b0385166000908152602087905260409020546000199091019080821461052a5760008760010183815481106104c557fe5b6000918252602090912001546001890180546001600160a01b0390921692508291849081106104f057fe5b600091825260208083209190910180546001600160a01b0319166001600160a01b0394851617905592909116815290889052604090208190555b6001600160a01b0386166000908152602088905260408120556001808801546105589163ffffffff6107e016565b6105656001890182610807565b5050505050505050565b606060328251106105b457604051600160e51b62461bcd02815260040180806020018281038252602281526020018061084f6022913960400191505060405180910390fd5b606082516040519080825280602002602001820160405280156105e1578160200160208202803883390190505b50905060005b83518110156106315761060d8585838151811061060057fe5b6020026020010151610770565b82828151811061061957fe5b911515602092830291909101909101526001016105e7565b509392505050565b600082826106478282610770565b8061065957506001600160a01b038116155b6106ad5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b6001600160a01b03841660009081526020869052604090205460018601546106dc82600263ffffffff6107f516565b11156106ec576000935050610761565b6001600160a01b0385161561073757856001016107136001836107f590919063ffffffff16565b8154811061071d57fe5b6000918252602090912001546001600160a01b031661075d565b8560010160008154811061074757fe5b6000918252602090912001546001600160a01b03165b9350505b505092915050565b6001015490565b6001820154600090156107d8576001600160a01b03821660008181526020859052604090205460018501805490919081106107a757fe5b6000918252602090912001546001600160a01b03161480156107d157506001600160a01b03821615155b9050610278565b506000610278565b6000828211156107ef57600080fd5b50900390565b60008282018381101561027557600080fd5b81548183558181111561082b5760008381526020902061082b918101908301610830565b505050565b61029f91905b8082111561084a5760008155600101610836565b509056fe5374617475732061727261792063616e2774206265206d6f7265207468616e203530746869732069642073686f756c64204e4f542065786973747320696e206c697374a165627a7a72305820879ff1bca096558014292963de1b6066283a169bd442c52c0c4270977932c2fe0029",
+  "sourceMap": "204:806:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:806:9;;;;;;;",
+  "deployedSourceMap": "204:806:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:806:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;405:65;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;405:65:9;-1:-1:-1;;;;;405:65:9;;:::i;:::-;;476:71;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;476:71:9;-1:-1:-1;;;;;476:71:9;;:::i;884:124::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;884:124:9;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;884:124:9;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;884:124:9;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;39:11;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;-1:-1;884:124:9;;-1:-1:-1;884:124:9;-1:-1:-1;884:124:9;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;884:124:9;;;;;;;;;;;;;;;;;553:123;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;553:123:9;-1:-1:-1;;;;;553:123:9;;:::i;:::-;;;;-1:-1:-1;;;;;553:123:9;;;;;;;;;;;;;;682:92;;;:::i;:::-;;;;;;;;;;;;;;;;780:98;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;780:98:9;-1:-1:-1;;;;;780:98:9;;:::i;:::-;;;;;;;;;;;;;;;;;;405:65;450:13;:4;459:3;450:13;:8;:13;:::i;:::-;405:65;:::o;476:71::-;524:16;:4;536:3;524:16;:11;:16;:::i;884:124::-;950:13;982:19;996:4;;982:19;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;-1:-1;99:1;982:19:9;-1:-1:-1;;982:19:9;:13;:19;;-1:-1:-1;982:19:9:i;:::-;975:26;;884:124;;;;;:::o;553:123::-;624:7;650:19;624:7;665:3;650:19;:14;:19;:::i;682:92::-;727:4;750:17;:4;:15;:17::i;:::-;743:24;;682:92;;:::o;780:98::-;832:4;855:16;832:4;867:3;855:16;:11;:16;:::i;1349:207:2:-;1433:3;-1:-1:-1;;;;;593:17:2;;585:50;;;;;-1:-1:-1;;;;;585:50:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;1461:4;1467:3;1135:17;1142:4;1148:3;1135:6;:17::i;:::-;1134:18;:37;;;;-1:-1:-1;;;;;;1156:15:2;;;;1134:37;1126:83;;;;-1:-1:-1;;;;;1126:83:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1506:8:2;;;;:15;;-1:-1:-1;;;;;1486:17:2;;;:12;:17;;;;;;;;;;:35;;;23:18:-1;;;45:23;;1531:18:2;;;;;;;;;-1:-1:-1;;;;;;1531:18:2;;;;;;1349:207::o;1664:507::-;1751:3;-1:-1:-1;;;;;593:17:2;;585:50;;;;;-1:-1:-1;;;;;585:50:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;1776:4;1782:3;846:17;853:4;859:3;846:6;:17::i;:::-;:36;;;-1:-1:-1;;;;;;867:15:2;;;846:36;838:78;;;;;-1:-1:-1;;;;;838:78:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;1834:1;1818:8;;:15;-1:-1:-1;;;;;1865:17:2;;1801:14;1865:17;;;;;;;;;;;-1:-1:-1;;1818:17:2;;;;1897:25;;;1893:187;;1938:14;1955:4;:8;;1964:9;1955:19;;;;;;;;;;;;;;;;;;;1989:8;;:22;;-1:-1:-1;;;;;1955:19:2;;;;-1:-1:-1;1955:19:2;;1998:12;;1989:22;;;;;;;;;;;;;;;;;;:31;;-1:-1:-1;;;;;;1989:31:2;-1:-1:-1;;;;;1989:31:2;;;;;;2034:20;;;;;;;;;;;;;:35;;;1893:187;-1:-1:-1;;;;;2097:17:2;;:12;:17;;;;;;;;;;2090:24;2162:1;2142:8;;;:15;:22;;;:19;:22;:::i;:::-;2124:40;:8;;;:40;;:::i;:::-;;926:1;;645;;1664:507;;;:::o;3419:395::-;3529:13;3580:2;3566:4;:11;:16;3558:63;;;;-1:-1:-1;;;;;3558:63:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3632:20;3666:4;:11;3655:23;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;136:17;;-1:-1;3655:23:2;-1:-1:-1;3632:46:2;-1:-1:-1;3693:6:2;3688:97;3709:4;:11;3705:1;:15;3688:97;;;3753:21;3760:4;3766;3771:1;3766:7;;;;;;;;;;;;;;3753:6;:21::i;:::-;3741:6;3748:1;3741:9;;;;;;;;:33;;;:9;;;;;;;;;;;:33;3722:3;;3688:97;;;-1:-1:-1;3801:6:2;3419:395;-1:-1:-1;;;3419:395:2:o;2329:376::-;2462:7;2421:4;2427:3;846:17;853:4;859:3;846:6;:17::i;:::-;:36;;;-1:-1:-1;;;;;;867:15:2;;;846:36;838:78;;;;;-1:-1:-1;;;;;838:78:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2498:17:2;;2485:10;2498:17;;;;;;;;;;;2544:8;;;:15;2529:12;2498:17;2539:1;2529:12;:9;:12;:::i;:::-;:30;2525:174;;;2590:1;2575:17;;;;;2525:174;-1:-1:-1;;;;;2631:17:2;;;2630:58;;2666:4;:8;;2675:12;2685:1;2675:5;:9;;:12;;;;:::i;:::-;2666:22;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2666:22:2;2630:58;;;2652:4;:8;;2661:1;2652:11;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2652:11:2;2630:58;2623:65;;;926:1;2329:376;;;;;;:::o;2779:111::-;2868:8;;:15;;2779:111::o;3014:279::-;3136:8;;;:15;3112:4;;3136:19;3132:155;;-1:-1:-1;;;;;3178:34:2;;3187:12;:17;;;;;;;;;;;3178:8;;;:27;;:8;;3187:17;3178:27;;;;;;;;;;;;;;;;-1:-1:-1;;;;;3178:27:2;:34;:55;;;;-1:-1:-1;;;;;;3216:17:2;;;;3178:55;3171:62;;;;3132:155;-1:-1:-1;3271:5:2;3264:12;;1205:145:16;1263:7;1295:1;1290;:6;;1282:15;;;;;;-1:-1:-1;1319:5:16;;;1205:145::o;1431:::-;1489:7;1520:5;;;1543:6;;;;1535:15;;;;;204:806:9;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;",
+  "source": "pragma solidity 0.5;\n\nimport \"../AddressEnumerationLib.sol\";\n\n/**\n * @title ListMock\n * @author Ihor Borysyuk Igor Dulger\n * @dev Mock contract to test List library. All docs are into origin library.\n */\ncontract AddressEnumerationLibMock {\n\n    using AddressEnumerationLib for AddressEnumerationLib.ListData;\n\n    AddressEnumerationLib.ListData private list;\n\n    event Debug(string text, uint id);\n\n    function add(address _id) external {\n        list.add(_id);\n    }\n\n    function remove(address _id) external {\n        list.remove(_id);\n    }\n\n    function getNextId(address _id) external\n        view\n        returns (address) {\n        return list.getNextId(_id);\n    }\n\n    function itemsCount() external view returns (uint) {\n        return list.itemsCount();\n    }\n\n    function exists(address _id) external view returns (bool) {\n        return list.exists(_id);\n    }\n\n    function statuses(address[] calldata _ids) external view returns (bool[] memory) {\n        return list.statuses(_ids);\n    }\n}\n",
+  "sourcePath": "/work/room2read/contracts/libs/mocks/AddressEnumerationMock.sol",
+  "ast": {
+    "absolutePath": "/work/room2read/contracts/libs/mocks/AddressEnumerationMock.sol",
+    "exportedSymbols": {
+      "AddressEnumerationLibMock": [
+        3386
+      ]
+    },
+    "id": 3387,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3298,
+        "literals": [
+          "solidity",
+          "0.5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:20:9"
+      },
+      {
+        "absolutePath": "/work/room2read/contracts/libs/AddressEnumerationLib.sol",
+        "file": "../AddressEnumerationLib.sol",
+        "id": 3299,
+        "nodeType": "ImportDirective",
+        "scope": 3387,
+        "sourceUnit": 1544,
+        "src": "22:38:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ListMock\n@author Ihor Borysyuk Igor Dulger\n@dev Mock contract to test List library. All docs are into origin library.",
+        "fullyImplemented": true,
+        "id": 3386,
+        "linearizedBaseContracts": [
+          3386
+        ],
+        "name": "AddressEnumerationLibMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3302,
+            "libraryName": {
+              "contractScope": null,
+              "id": 3300,
+              "name": "AddressEnumerationLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1543,
+              "src": "252:21:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AddressEnumerationLib_$1543",
+                "typeString": "library AddressEnumerationLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "246:63:9",
+            "typeName": {
+              "contractScope": null,
+              "id": 3301,
+              "name": "AddressEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1212,
+              "src": "278:30:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$1212_storage_ptr",
+                "typeString": "struct AddressEnumerationLib.ListData"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3304,
+            "name": "list",
+            "nodeType": "VariableDeclaration",
+            "scope": 3386,
+            "src": "315:43:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ListData_$1212_storage",
+              "typeString": "struct AddressEnumerationLib.ListData"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 3303,
+              "name": "AddressEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1212,
+              "src": "315:30:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$1212_storage_ptr",
+                "typeString": "struct AddressEnumerationLib.ListData"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3310,
+            "name": "Debug",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3306,
+                  "indexed": false,
+                  "name": "text",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3310,
+                  "src": "377:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3305,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3308,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3310,
+                  "src": "390:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3307,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "390:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:22:9"
+            },
+            "src": "365:34:9"
+          },
+          {
+            "body": {
+              "id": 3321,
+              "nodeType": "Block",
+              "src": "440:30:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3318,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3312,
+                        "src": "459:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3315,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "450:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3317,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1305,
+                      "src": "450:8:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address)"
+                      }
+                    },
+                    "id": 3319,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "450:13:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3320,
+                  "nodeType": "ExpressionStatement",
+                  "src": "450:13:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3322,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3312,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3322,
+                  "src": "418:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3311,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:13:9"
+            },
+            "returnParameters": {
+              "id": 3314,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:0:9"
+            },
+            "scope": 3386,
+            "src": "405:65:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3333,
+              "nodeType": "Block",
+              "src": "514:33:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3330,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3324,
+                        "src": "536:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3327,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "524:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3329,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1382,
+                      "src": "524:11:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address)"
+                      }
+                    },
+                    "id": 3331,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "524:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3332,
+                  "nodeType": "ExpressionStatement",
+                  "src": "524:16:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3334,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3324,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3334,
+                  "src": "492:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3323,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "492:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "491:13:9"
+            },
+            "returnParameters": {
+              "id": 3326,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "514:0:9"
+            },
+            "scope": 3386,
+            "src": "476:71:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3346,
+              "nodeType": "Block",
+              "src": "633:43:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3343,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3336,
+                        "src": "665:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3341,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "650:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3342,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getNextId",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1437,
+                      "src": "650:14:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$_t_address_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address) view returns (address)"
+                      }
+                    },
+                    "id": 3344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "650:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 3340,
+                  "id": 3345,
+                  "nodeType": "Return",
+                  "src": "643:26:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3347,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3336,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3347,
+                  "src": "572:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:13:9"
+            },
+            "returnParameters": {
+              "id": 3340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3339,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3347,
+                  "src": "624:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3338,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:9:9"
+            },
+            "scope": 3386,
+            "src": "553:123:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3356,
+              "nodeType": "Block",
+              "src": "733:41:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3352,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "750:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3353,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "itemsCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1449,
+                      "src": "750:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3354,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "750:17:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3351,
+                  "id": 3355,
+                  "nodeType": "Return",
+                  "src": "743:24:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3357,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "itemsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "701:2:9"
+            },
+            "returnParameters": {
+              "id": 3351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3350,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3357,
+                  "src": "727:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3349,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:6:9"
+            },
+            "scope": 3386,
+            "src": "682:92:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3369,
+              "nodeType": "Block",
+              "src": "838:40:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3366,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3359,
+                        "src": "867:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3364,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "855:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3365,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1485,
+                      "src": "855:11:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 3367,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "855:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3363,
+                  "id": 3368,
+                  "nodeType": "Return",
+                  "src": "848:23:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3370,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3359,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3370,
+                  "src": "796:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:13:9"
+            },
+            "returnParameters": {
+              "id": 3363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3362,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3370,
+                  "src": "832:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3361,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "832:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "831:6:9"
+            },
+            "scope": 3386,
+            "src": "780:98:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3384,
+              "nodeType": "Block",
+              "src": "965:43:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3381,
+                        "name": "_ids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3373,
+                        "src": "996:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3379,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "982:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3380,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "statuses",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1542,
+                      "src": "982:13:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_array$_t_address_$dyn_memory_ptr_$returns$_t_array$_t_bool_$dyn_memory_ptr_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address[] memory) view returns (bool[] memory)"
+                      }
+                    },
+                    "id": 3382,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "982:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                      "typeString": "bool[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 3378,
+                  "id": 3383,
+                  "nodeType": "Return",
+                  "src": "975:26:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3385,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "statuses",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3373,
+                  "name": "_ids",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3385,
+                  "src": "902:23:9",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3371,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "902:7:9",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 3372,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "902:9:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "901:25:9"
+            },
+            "returnParameters": {
+              "id": 3378,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3377,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3385,
+                  "src": "950:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3375,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "950:4:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 3376,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "950:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "949:15:9"
+            },
+            "scope": 3386,
+            "src": "884:124:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3387,
+        "src": "204:806:9"
+      }
+    ],
+    "src": "0:1011:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/work/room2read/contracts/libs/mocks/AddressEnumerationMock.sol",
+    "exportedSymbols": {
+      "AddressEnumerationLibMock": [
+        3386
+      ]
+    },
+    "id": 3387,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3298,
+        "literals": [
+          "solidity",
+          "0.5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:20:9"
+      },
+      {
+        "absolutePath": "/work/room2read/contracts/libs/AddressEnumerationLib.sol",
+        "file": "../AddressEnumerationLib.sol",
+        "id": 3299,
+        "nodeType": "ImportDirective",
+        "scope": 3387,
+        "sourceUnit": 1544,
+        "src": "22:38:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ListMock\n@author Ihor Borysyuk Igor Dulger\n@dev Mock contract to test List library. All docs are into origin library.",
+        "fullyImplemented": true,
+        "id": 3386,
+        "linearizedBaseContracts": [
+          3386
+        ],
+        "name": "AddressEnumerationLibMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3302,
+            "libraryName": {
+              "contractScope": null,
+              "id": 3300,
+              "name": "AddressEnumerationLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1543,
+              "src": "252:21:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AddressEnumerationLib_$1543",
+                "typeString": "library AddressEnumerationLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "246:63:9",
+            "typeName": {
+              "contractScope": null,
+              "id": 3301,
+              "name": "AddressEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1212,
+              "src": "278:30:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$1212_storage_ptr",
+                "typeString": "struct AddressEnumerationLib.ListData"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3304,
+            "name": "list",
+            "nodeType": "VariableDeclaration",
+            "scope": 3386,
+            "src": "315:43:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ListData_$1212_storage",
+              "typeString": "struct AddressEnumerationLib.ListData"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 3303,
+              "name": "AddressEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1212,
+              "src": "315:30:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$1212_storage_ptr",
+                "typeString": "struct AddressEnumerationLib.ListData"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3310,
+            "name": "Debug",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3306,
+                  "indexed": false,
+                  "name": "text",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3310,
+                  "src": "377:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3305,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3308,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3310,
+                  "src": "390:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3307,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "390:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:22:9"
+            },
+            "src": "365:34:9"
+          },
+          {
+            "body": {
+              "id": 3321,
+              "nodeType": "Block",
+              "src": "440:30:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3318,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3312,
+                        "src": "459:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3315,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "450:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3317,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1305,
+                      "src": "450:8:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address)"
+                      }
+                    },
+                    "id": 3319,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "450:13:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3320,
+                  "nodeType": "ExpressionStatement",
+                  "src": "450:13:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3322,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3312,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3322,
+                  "src": "418:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3311,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:13:9"
+            },
+            "returnParameters": {
+              "id": 3314,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:0:9"
+            },
+            "scope": 3386,
+            "src": "405:65:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3333,
+              "nodeType": "Block",
+              "src": "514:33:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3330,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3324,
+                        "src": "536:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3327,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "524:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3329,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1382,
+                      "src": "524:11:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address)"
+                      }
+                    },
+                    "id": 3331,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "524:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3332,
+                  "nodeType": "ExpressionStatement",
+                  "src": "524:16:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3334,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3324,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3334,
+                  "src": "492:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3323,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "492:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "491:13:9"
+            },
+            "returnParameters": {
+              "id": 3326,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "514:0:9"
+            },
+            "scope": 3386,
+            "src": "476:71:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3346,
+              "nodeType": "Block",
+              "src": "633:43:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3343,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3336,
+                        "src": "665:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3341,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "650:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3342,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getNextId",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1437,
+                      "src": "650:14:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$_t_address_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address) view returns (address)"
+                      }
+                    },
+                    "id": 3344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "650:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 3340,
+                  "id": 3345,
+                  "nodeType": "Return",
+                  "src": "643:26:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3347,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3336,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3347,
+                  "src": "572:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:13:9"
+            },
+            "returnParameters": {
+              "id": 3340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3339,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3347,
+                  "src": "624:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3338,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:9:9"
+            },
+            "scope": 3386,
+            "src": "553:123:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3356,
+              "nodeType": "Block",
+              "src": "733:41:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3352,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "750:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3353,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "itemsCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1449,
+                      "src": "750:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3354,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "750:17:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3351,
+                  "id": 3355,
+                  "nodeType": "Return",
+                  "src": "743:24:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3357,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "itemsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "701:2:9"
+            },
+            "returnParameters": {
+              "id": 3351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3350,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3357,
+                  "src": "727:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3349,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:6:9"
+            },
+            "scope": 3386,
+            "src": "682:92:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3369,
+              "nodeType": "Block",
+              "src": "838:40:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3366,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3359,
+                        "src": "867:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3364,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "855:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3365,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1485,
+                      "src": "855:11:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 3367,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "855:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3363,
+                  "id": 3368,
+                  "nodeType": "Return",
+                  "src": "848:23:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3370,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3359,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3370,
+                  "src": "796:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:13:9"
+            },
+            "returnParameters": {
+              "id": 3363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3362,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3370,
+                  "src": "832:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3361,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "832:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "831:6:9"
+            },
+            "scope": 3386,
+            "src": "780:98:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3384,
+              "nodeType": "Block",
+              "src": "965:43:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3381,
+                        "name": "_ids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3373,
+                        "src": "996:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3379,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3304,
+                        "src": "982:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$1212_storage",
+                          "typeString": "struct AddressEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3380,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "statuses",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1542,
+                      "src": "982:13:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$1212_storage_ptr_$_t_array$_t_address_$dyn_memory_ptr_$returns$_t_array$_t_bool_$dyn_memory_ptr_$bound_to$_t_struct$_ListData_$1212_storage_ptr_$",
+                        "typeString": "function (struct AddressEnumerationLib.ListData storage pointer,address[] memory) view returns (bool[] memory)"
+                      }
+                    },
+                    "id": 3382,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "982:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                      "typeString": "bool[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 3378,
+                  "id": 3383,
+                  "nodeType": "Return",
+                  "src": "975:26:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3385,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "statuses",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3373,
+                  "name": "_ids",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3385,
+                  "src": "902:23:9",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3371,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "902:7:9",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 3372,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "902:9:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "901:25:9"
+            },
+            "returnParameters": {
+              "id": 3378,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3377,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3385,
+                  "src": "950:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3375,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "950:4:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 3376,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "950:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "949:15:9"
+            },
+            "scope": 3386,
+            "src": "884:124:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3387,
+        "src": "204:806:9"
+      }
+    ],
+    "src": "0:1011:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-24T11:41:08.831Z",
+  "devdoc": {
+    "author": "Ihor Borysyuk Igor Dulger",
+    "details": "Mock contract to test List library. All docs are into origin library.",
+    "methods": {},
+    "title": "ListMock"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

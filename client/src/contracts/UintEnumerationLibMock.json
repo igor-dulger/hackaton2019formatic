@@ -1,0 +1,2228 @@
+{
+  "contractName": "UintEnumerationLibMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "Debug",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getNextId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "itemsCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_ids",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "statuses",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getNextId\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ids\",\"type\":\"uint256[]\"}],\"name\":\"statuses\",\"outputs\":[{\"name\":\"\",\"type\":\"bool[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"remove\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"exists\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"itemsCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"text\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"Debug\",\"type\":\"event\"}],\"devdoc\":{\"author\":\"Ihor Borysyuk Igor Dulger\",\"details\":\"Mock contract to test List library. All docs are into origin library.\",\"methods\":{},\"title\":\"ListMock\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/work/room2read/contracts/libs/mocks/UintEnumerationMock.sol\":\"UintEnumerationLibMock\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/work/room2read/contracts/libs/UintEnumerationLib.sol\":{\"keccak256\":\"0x1be3f195d0e3116a2ff8c6cedf699cdad01754a3c39e4cda9630acdc23c715b2\",\"urls\":[\"bzzr://5536288de654dd64426be4db907863cb365713d8d0f9dda424e79ed94372fb44\"]},\"/work/room2read/contracts/libs/mocks/UintEnumerationMock.sol\":{\"keccak256\":\"0x3e4dcb6f3ec84206ee3e1615dd5117c0636b2f4b5bbacc8999aa4bf158f4aa9d\",\"urls\":[\"bzzr://c90e6038818ca572c5435ec788f13fc7df8f0c27caf55be1bd9cd70bd8e76eb8\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x965012d27b4262d7a41f5028cbb30c51ebd9ecd4be8fb30380aaa7a3c64fbc8b\",\"urls\":[\"bzzr://41ca38f6b0fa4b77b0feec43e422cfbec48b7eb38a41edf0b85c77e8d9a296b1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506107c0806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80631003e2d2146100675780631183a8c0146100865780634269326e146100b55780634cc82215146101755780634f558e7914610192578063e2c03ace146101c3575b600080fd5b6100846004803603602081101561007d57600080fd5b50356101cb565b005b6100a36004803603602081101561009c57600080fd5b50356101df565b60408051918252519081900360200190f35b610125600480360360208110156100cb57600080fd5b8101906020810181356401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184602083028401116401000000008311171561011a57600080fd5b5090925090506101f7565b60408051602080825283518183015283519192839290830191858101910280838360005b83811015610161578181015183820152602001610149565b505050509050019250505060405180910390f35b6100846004803603602081101561018b57600080fd5b5035610243565b6101af600480360360208110156101a857600080fd5b5035610254565b604080519115158252519081900360200190f35b6100a3610266565b6101dc60008263ffffffff61027816565b50565b60006101f1818363ffffffff61035316565b92915050565b606061023c83838080602002602001604051908101604052809392919081815260200183836020028082843760009201829052509392505063ffffffff610453169050565b9392505050565b6101dc60008263ffffffff61051d16565b60006101f1818363ffffffff61068916565b600061027260006106dc565b90505b90565b80600081116102d15760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826102dd8282610689565b1580156102e957508015155b61032757604051600160e51b62461bcd0281526004018080602001828103825260218152602001806107746021913960400191505060405180910390fd5b505050600180830180546000848152602095865260408120829055928101825590825292902090910155565b600082826103618282610689565b8061036a575080155b6103be5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60008481526020869052604090205460018601546103e382600263ffffffff6106e316565b11156103f357600093505061044b565b841561042b57856001016104116001836106e390919063ffffffff16565b8154811061041b57fe5b9060005260206000200154610447565b8560010160008154811061043b57fe5b90600052602060002001545b9350505b505092915050565b6060603282511061049857604051600160e51b62461bcd0281526004018080602001828103825260228152602001806107526022913960400191505060405180910390fd5b606082516040519080825280602002602001820160405280156104c5578160200160208202803883390190505b50905060005b8351811015610515576104f1858583815181106104e457fe5b6020026020010151610689565b8282815181106104fd57fe5b911515602092830291909101909101526001016104cb565b509392505050565b80600081116105765760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826105828282610689565b8061058b575080155b6105df5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60018501546000858152602087905260409020546000199091019080821461064e57600087600101838154811061061257fe5b906000526020600020015490508088600101838154811061062f57fe5b6000918252602080832090910192909255918252889052604090208190555b6000868152602088905260408120556001808801546106729163ffffffff6106f516565b61067f600189018261070a565b5050505050505050565b6001820154600090156106d45760008281526020849052604090205460018401805484929081106106b657fe5b90600052602060002001541480156106cd57508115155b90506101f1565b5060006101f1565b6001015490565b60008282018381101561023c57600080fd5b60008282111561070457600080fd5b50900390565b81548183558181111561072e5760008381526020902061072e918101908301610733565b505050565b61027591905b8082111561074d5760008155600101610739565b509056fe5374617475732061727261792063616e2774206265206d6f7265207468616e203530746869732069642073686f756c64204e4f542065786973747320696e206c697374a165627a7a72305820c0ffeb94826c22a17009e3904bcf08033bd24eee07ee19c1c8b79d2670fb8a650029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80631003e2d2146100675780631183a8c0146100865780634269326e146100b55780634cc82215146101755780634f558e7914610192578063e2c03ace146101c3575b600080fd5b6100846004803603602081101561007d57600080fd5b50356101cb565b005b6100a36004803603602081101561009c57600080fd5b50356101df565b60408051918252519081900360200190f35b610125600480360360208110156100cb57600080fd5b8101906020810181356401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184602083028401116401000000008311171561011a57600080fd5b5090925090506101f7565b60408051602080825283518183015283519192839290830191858101910280838360005b83811015610161578181015183820152602001610149565b505050509050019250505060405180910390f35b6100846004803603602081101561018b57600080fd5b5035610243565b6101af600480360360208110156101a857600080fd5b5035610254565b604080519115158252519081900360200190f35b6100a3610266565b6101dc60008263ffffffff61027816565b50565b60006101f1818363ffffffff61035316565b92915050565b606061023c83838080602002602001604051908101604052809392919081815260200183836020028082843760009201829052509392505063ffffffff610453169050565b9392505050565b6101dc60008263ffffffff61051d16565b60006101f1818363ffffffff61068916565b600061027260006106dc565b90505b90565b80600081116102d15760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826102dd8282610689565b1580156102e957508015155b61032757604051600160e51b62461bcd0281526004018080602001828103825260218152602001806107746021913960400191505060405180910390fd5b505050600180830180546000848152602095865260408120829055928101825590825292902090910155565b600082826103618282610689565b8061036a575080155b6103be5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60008481526020869052604090205460018601546103e382600263ffffffff6106e316565b11156103f357600093505061044b565b841561042b57856001016104116001836106e390919063ffffffff16565b8154811061041b57fe5b9060005260206000200154610447565b8560010160008154811061043b57fe5b90600052602060002001545b9350505b505092915050565b6060603282511061049857604051600160e51b62461bcd0281526004018080602001828103825260228152602001806107526022913960400191505060405180910390fd5b606082516040519080825280602002602001820160405280156104c5578160200160208202803883390190505b50905060005b8351811015610515576104f1858583815181106104e457fe5b6020026020010151610689565b8282815181106104fd57fe5b911515602092830291909101909101526001016104cb565b509392505050565b80600081116105765760408051600160e51b62461bcd02815260206004820152601460248201527f5a65726f20696420697320666f7262696464656e000000000000000000000000604482015290519081900360640190fd5b82826105828282610689565b8061058b575080155b6105df5760408051600160e51b62461bcd02815260206004820152601d60248201527f746869732069642073686f756c642065786973747320696e206c697374000000604482015290519081900360640190fd5b60018501546000858152602087905260409020546000199091019080821461064e57600087600101838154811061061257fe5b906000526020600020015490508088600101838154811061062f57fe5b6000918252602080832090910192909255918252889052604090208190555b6000868152602088905260408120556001808801546106729163ffffffff6106f516565b61067f600189018261070a565b5050505050505050565b6001820154600090156106d45760008281526020849052604090205460018401805484929081106106b657fe5b90600052602060002001541480156106cd57508115155b90506101f1565b5060006101f1565b6001015490565b60008282018381101561023c57600080fd5b60008282111561070457600080fd5b50900390565b81548183558181111561072e5760008381526020902061072e918101908301610733565b505050565b61027591905b8082111561074d5760008155600101610739565b509056fe5374617475732061727261792063616e2774206265206d6f7265207468616e203530746869732069642073686f756c64204e4f542065786973747320696e206c697374a165627a7a72305820c0ffeb94826c22a17009e3904bcf08033bd24eee07ee19c1c8b79d2670fb8a650029",
+  "sourceMap": "201:776:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;201:776:15;;;;;;;",
+  "deployedSourceMap": "201:776:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;201:776:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;390:62;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;390:62:15;;:::i;:::-;;532:117;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;532:117:15;;:::i;:::-;;;;;;;;;;;;;;;;854:121;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;854:121:15;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;854:121:15;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;854:121:15;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;39:11;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;-1:-1;854:121:15;;-1:-1:-1;854:121:15;-1:-1:-1;854:121:15;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;854:121:15;;;;;;;;;;;;;;;;;458:68;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;458:68:15;;:::i;753:95::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;753:95:15;;:::i;:::-;;;;;;;;;;;;;;;;;;655:92;;;:::i;390:62::-;432:13;:4;441:3;432:13;:8;:13;:::i;:::-;390:62;:::o;532:117::-;600:4;623:19;600:4;638:3;623:19;:14;:19;:::i;:::-;616:26;532:117;-1:-1:-1;;532:117:15:o;854:121::-;917:13;949:19;963:4;;949:19;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;-1:-1;99:1;949:19:15;-1:-1:-1;;949:19:15;:13;:19;;-1:-1:-1;949:19:15:i;:::-;942:26;854:121;-1:-1:-1;;;854:121:15:o;458:68::-;503:16;:4;515:3;503:16;:11;:16;:::i;753:95::-;802:4;825:16;802:4;837:3;825:16;:11;:16;:::i;655:92::-;700:4;723:17;:4;:15;:17::i;:::-;716:24;;655:92;;:::o;1303:204:8:-;1384:3;587:1;581:3;:7;573:40;;;;;-1:-1:-1;;;;;573:40:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;1412:4;1418:3;1098:17;1105:4;1111:3;1098:6;:17::i;:::-;1097:18;:28;;;;-1:-1:-1;1119:6:8;;;1097:28;1089:74;;;;-1:-1:-1;;;;;1089:74:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1457:8:8;;;;:15;;1437:12;:17;;;;;;;;;;:35;;;23:18:-1;;;45:23;;1482:18:8;;;;;;;;;;1303:204::o;2274:352::-;2404:4;2363;2369:3;821:17;828:4;834:3;821:6;:17::i;:::-;:27;;;-1:-1:-1;842:6:8;;821:27;813:69;;;;;-1:-1:-1;;;;;813:69:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;2424:10;2437:17;;;;;;;;;;;2483:8;;;:15;2468:12;2437:17;2478:1;2468:12;:9;:12;:::i;:::-;:30;2464:156;;;2521:1;2514:8;;;;;2464:156;2561:8;;2560:49;;2587:4;:8;;2596:12;2606:1;2596:5;:9;;:12;;;;:::i;:::-;2587:22;;;;;;;;;;;;;;;;2560:49;;;2573:4;:8;;2582:1;2573:11;;;;;;;;;;;;;;;;2560:49;2553:56;;;892:1;2274:352;;;;;;:::o;3328:392::-;3435:13;3486:2;3472:4;:11;:16;3464:63;;;;-1:-1:-1;;;;;3464:63:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3538:20;3572:4;:11;3561:23;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;136:17;;-1:-1;3561:23:8;-1:-1:-1;3538:46:8;-1:-1:-1;3599:6:8;3594:97;3615:4;:11;3611:1;:15;3594:97;;;3659:21;3666:4;3672;3677:1;3672:7;;;;;;;;;;;;;;3659:6;:21::i;:::-;3647:6;3654:1;3647:9;;;;;;;;:33;;;:9;;;;;;;;;;;:33;3628:3;;3594:97;;;-1:-1:-1;3707:6:8;3328:392;-1:-1:-1;;;3328:392:8:o;1615:501::-;1699:3;587:1;581:3;:7;573:40;;;;;-1:-1:-1;;;;;573:40:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;1724:4;1730:3;821:17;828:4;834:3;821:6;:17::i;:::-;:27;;;-1:-1:-1;842:6:8;;821:27;813:69;;;;;-1:-1:-1;;;;;813:69:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;1782:1;1766:8;;:15;1749:14;1813:17;;;;;;;;;;;-1:-1:-1;;1766:17:8;;;;1845:25;;;1841:184;;1886:11;1900:4;:8;;1909:9;1900:19;;;;;;;;;;;;;;;;1886:33;;1959:6;1934:4;:8;;1943:12;1934:22;;;;;;;;;;;;;;;;;;;:31;;;;1979:20;;;;;;;;;:35;;;1841:184;2042:12;:17;;;;;;;;;;2035:24;2107:1;2087:8;;;:15;:22;;;:19;:22;:::i;:::-;2069:40;:8;;;:40;;:::i;:::-;;892:1;;623;;1615:501;;;:::o;2935:267::-;3054:8;;;:15;3030:4;;3054:19;3050:146;;3105:12;:17;;;;;;;;;;;3096:8;;;:27;;3127:3;;3105:17;3096:27;;;;;;;;;;;;;;:34;:46;;;;-1:-1:-1;3134:8:8;;;3096:46;3089:53;;;;3050:146;-1:-1:-1;3180:5:8;3173:12;;2700:111;2789:8;;:15;;2700:111::o;1431:145:16:-;1489:7;1520:5;;;1543:6;;;;1535:15;;;;;1205:145;1263:7;1295:1;1290;:6;;1282:15;;;;;;-1:-1:-1;1319:5:16;;;1205:145::o;201:776:15:-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;",
+  "source": "pragma solidity 0.5;\n\nimport \"../UintEnumerationLib.sol\";\n\n/**\n * @title ListMock\n * @author Ihor Borysyuk Igor Dulger\n * @dev Mock contract to test List library. All docs are into origin library.\n */\ncontract UintEnumerationLibMock {\n\n    using UintEnumerationLib for UintEnumerationLib.ListData;\n\n    UintEnumerationLib.ListData private list;\n\n    event Debug(string text, uint id);\n\n    function add(uint _id) external {\n        list.add(_id);\n    }\n\n    function remove(uint _id) external {\n        list.remove(_id);\n    }\n\n    function getNextId(uint _id) external\n        view\n        returns (uint) {\n        return list.getNextId(_id);\n    }\n\n    function itemsCount() external view returns (uint) {\n        return list.itemsCount();\n    }\n\n    function exists(uint _id) external view returns (bool) {\n        return list.exists(_id);\n    }\n\n    function statuses(uint[] calldata _ids) external view returns (bool[] memory) {\n        return list.statuses(_ids);\n    }\n}\n",
+  "sourcePath": "/work/room2read/contracts/libs/mocks/UintEnumerationMock.sol",
+  "ast": {
+    "absolutePath": "/work/room2read/contracts/libs/mocks/UintEnumerationMock.sol",
+    "exportedSymbols": {
+      "UintEnumerationLibMock": [
+        3902
+      ]
+    },
+    "id": 3903,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3814,
+        "literals": [
+          "solidity",
+          "0.5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:20:15"
+      },
+      {
+        "absolutePath": "/work/room2read/contracts/libs/UintEnumerationLib.sol",
+        "file": "../UintEnumerationLib.sol",
+        "id": 3815,
+        "nodeType": "ImportDirective",
+        "scope": 3903,
+        "sourceUnit": 3297,
+        "src": "22:35:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ListMock\n@author Ihor Borysyuk Igor Dulger\n@dev Mock contract to test List library. All docs are into origin library.",
+        "fullyImplemented": true,
+        "id": 3902,
+        "linearizedBaseContracts": [
+          3902
+        ],
+        "name": "UintEnumerationLibMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3818,
+            "libraryName": {
+              "contractScope": null,
+              "id": 3816,
+              "name": "UintEnumerationLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3296,
+              "src": "246:18:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UintEnumerationLib_$3296",
+                "typeString": "library UintEnumerationLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "240:57:15",
+            "typeName": {
+              "contractScope": null,
+              "id": 3817,
+              "name": "UintEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2977,
+              "src": "269:27:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$2977_storage_ptr",
+                "typeString": "struct UintEnumerationLib.ListData"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3820,
+            "name": "list",
+            "nodeType": "VariableDeclaration",
+            "scope": 3902,
+            "src": "303:40:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ListData_$2977_storage",
+              "typeString": "struct UintEnumerationLib.ListData"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 3819,
+              "name": "UintEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2977,
+              "src": "303:27:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$2977_storage_ptr",
+                "typeString": "struct UintEnumerationLib.ListData"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3826,
+            "name": "Debug",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3825,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3822,
+                  "indexed": false,
+                  "name": "text",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3826,
+                  "src": "362:11:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3821,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "362:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3824,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3826,
+                  "src": "375:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3823,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "361:22:15"
+            },
+            "src": "350:34:15"
+          },
+          {
+            "body": {
+              "id": 3837,
+              "nodeType": "Block",
+              "src": "422:30:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3834,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3828,
+                        "src": "441:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3831,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "432:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3833,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3064,
+                      "src": "432:8:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256)"
+                      }
+                    },
+                    "id": 3835,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "432:13:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3836,
+                  "nodeType": "ExpressionStatement",
+                  "src": "432:13:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3838,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3828,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3838,
+                  "src": "403:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3827,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "403:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "402:10:15"
+            },
+            "returnParameters": {
+              "id": 3830,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "422:0:15"
+            },
+            "scope": 3902,
+            "src": "390:62:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3849,
+              "nodeType": "Block",
+              "src": "493:33:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3846,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3840,
+                        "src": "515:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3843,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "503:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3845,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3141,
+                      "src": "503:11:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256)"
+                      }
+                    },
+                    "id": 3847,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "503:16:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3848,
+                  "nodeType": "ExpressionStatement",
+                  "src": "503:16:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3850,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3841,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3840,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3850,
+                  "src": "474:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3839,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "474:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "473:10:15"
+            },
+            "returnParameters": {
+              "id": 3842,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "493:0:15"
+            },
+            "scope": 3902,
+            "src": "458:68:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3862,
+              "nodeType": "Block",
+              "src": "606:43:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3859,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3852,
+                        "src": "638:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3857,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "623:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3858,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getNextId",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3192,
+                      "src": "623:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 3860,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "623:19:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3856,
+                  "id": 3861,
+                  "nodeType": "Return",
+                  "src": "616:26:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3853,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3852,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3863,
+                  "src": "551:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3851,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "550:10:15"
+            },
+            "returnParameters": {
+              "id": 3856,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3855,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3863,
+                  "src": "600:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3854,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "599:6:15"
+            },
+            "scope": 3902,
+            "src": "532:117:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3872,
+              "nodeType": "Block",
+              "src": "706:41:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3868,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "723:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3869,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "itemsCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3204,
+                      "src": "723:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "723:17:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3867,
+                  "id": 3871,
+                  "nodeType": "Return",
+                  "src": "716:24:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3873,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "itemsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3864,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:2:15"
+            },
+            "returnParameters": {
+              "id": 3867,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3866,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "700:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3865,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "700:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "699:6:15"
+            },
+            "scope": 3902,
+            "src": "655:92:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3885,
+              "nodeType": "Block",
+              "src": "808:40:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3882,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3875,
+                        "src": "837:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3880,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "825:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3881,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3238,
+                      "src": "825:11:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 3883,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:16:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3879,
+                  "id": 3884,
+                  "nodeType": "Return",
+                  "src": "818:23:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3886,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3875,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3886,
+                  "src": "769:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3874,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "769:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:10:15"
+            },
+            "returnParameters": {
+              "id": 3879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3878,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3886,
+                  "src": "802:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3877,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "802:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "801:6:15"
+            },
+            "scope": 3902,
+            "src": "753:95:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3900,
+              "nodeType": "Block",
+              "src": "932:43:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3897,
+                        "name": "_ids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3889,
+                        "src": "963:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3895,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "949:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3896,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "statuses",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3295,
+                      "src": "949:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_array$_t_bool_$dyn_memory_ptr_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256[] memory) view returns (bool[] memory)"
+                      }
+                    },
+                    "id": 3898,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "949:19:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                      "typeString": "bool[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 3894,
+                  "id": 3899,
+                  "nodeType": "Return",
+                  "src": "942:26:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3901,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "statuses",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3889,
+                  "name": "_ids",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3901,
+                  "src": "872:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3887,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "872:4:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3888,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "872:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "871:22:15"
+            },
+            "returnParameters": {
+              "id": 3894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3893,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3901,
+                  "src": "917:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3891,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "917:4:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 3892,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "917:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "916:15:15"
+            },
+            "scope": 3902,
+            "src": "854:121:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3903,
+        "src": "201:776:15"
+      }
+    ],
+    "src": "0:978:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/work/room2read/contracts/libs/mocks/UintEnumerationMock.sol",
+    "exportedSymbols": {
+      "UintEnumerationLibMock": [
+        3902
+      ]
+    },
+    "id": 3903,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3814,
+        "literals": [
+          "solidity",
+          "0.5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:20:15"
+      },
+      {
+        "absolutePath": "/work/room2read/contracts/libs/UintEnumerationLib.sol",
+        "file": "../UintEnumerationLib.sol",
+        "id": 3815,
+        "nodeType": "ImportDirective",
+        "scope": 3903,
+        "sourceUnit": 3297,
+        "src": "22:35:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ListMock\n@author Ihor Borysyuk Igor Dulger\n@dev Mock contract to test List library. All docs are into origin library.",
+        "fullyImplemented": true,
+        "id": 3902,
+        "linearizedBaseContracts": [
+          3902
+        ],
+        "name": "UintEnumerationLibMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3818,
+            "libraryName": {
+              "contractScope": null,
+              "id": 3816,
+              "name": "UintEnumerationLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3296,
+              "src": "246:18:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UintEnumerationLib_$3296",
+                "typeString": "library UintEnumerationLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "240:57:15",
+            "typeName": {
+              "contractScope": null,
+              "id": 3817,
+              "name": "UintEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2977,
+              "src": "269:27:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$2977_storage_ptr",
+                "typeString": "struct UintEnumerationLib.ListData"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3820,
+            "name": "list",
+            "nodeType": "VariableDeclaration",
+            "scope": 3902,
+            "src": "303:40:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ListData_$2977_storage",
+              "typeString": "struct UintEnumerationLib.ListData"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 3819,
+              "name": "UintEnumerationLib.ListData",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2977,
+              "src": "303:27:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ListData_$2977_storage_ptr",
+                "typeString": "struct UintEnumerationLib.ListData"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3826,
+            "name": "Debug",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3825,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3822,
+                  "indexed": false,
+                  "name": "text",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3826,
+                  "src": "362:11:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3821,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "362:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3824,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3826,
+                  "src": "375:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3823,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "361:22:15"
+            },
+            "src": "350:34:15"
+          },
+          {
+            "body": {
+              "id": 3837,
+              "nodeType": "Block",
+              "src": "422:30:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3834,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3828,
+                        "src": "441:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3831,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "432:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3833,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3064,
+                      "src": "432:8:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256)"
+                      }
+                    },
+                    "id": 3835,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "432:13:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3836,
+                  "nodeType": "ExpressionStatement",
+                  "src": "432:13:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3838,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3828,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3838,
+                  "src": "403:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3827,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "403:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "402:10:15"
+            },
+            "returnParameters": {
+              "id": 3830,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "422:0:15"
+            },
+            "scope": 3902,
+            "src": "390:62:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3849,
+              "nodeType": "Block",
+              "src": "493:33:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3846,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3840,
+                        "src": "515:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3843,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "503:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3845,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3141,
+                      "src": "503:11:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256)"
+                      }
+                    },
+                    "id": 3847,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "503:16:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3848,
+                  "nodeType": "ExpressionStatement",
+                  "src": "503:16:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3850,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3841,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3840,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3850,
+                  "src": "474:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3839,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "474:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "473:10:15"
+            },
+            "returnParameters": {
+              "id": 3842,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "493:0:15"
+            },
+            "scope": 3902,
+            "src": "458:68:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3862,
+              "nodeType": "Block",
+              "src": "606:43:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3859,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3852,
+                        "src": "638:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3857,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "623:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3858,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getNextId",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3192,
+                      "src": "623:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 3860,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "623:19:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3856,
+                  "id": 3861,
+                  "nodeType": "Return",
+                  "src": "616:26:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3853,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3852,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3863,
+                  "src": "551:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3851,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "550:10:15"
+            },
+            "returnParameters": {
+              "id": 3856,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3855,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3863,
+                  "src": "600:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3854,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "599:6:15"
+            },
+            "scope": 3902,
+            "src": "532:117:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3872,
+              "nodeType": "Block",
+              "src": "706:41:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3868,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "723:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3869,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "itemsCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3204,
+                      "src": "723:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "723:17:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3867,
+                  "id": 3871,
+                  "nodeType": "Return",
+                  "src": "716:24:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3873,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "itemsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3864,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:2:15"
+            },
+            "returnParameters": {
+              "id": 3867,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3866,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "700:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3865,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "700:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "699:6:15"
+            },
+            "scope": 3902,
+            "src": "655:92:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3885,
+              "nodeType": "Block",
+              "src": "808:40:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3882,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3875,
+                        "src": "837:3:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3880,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "825:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3881,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3238,
+                      "src": "825:11:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 3883,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:16:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3879,
+                  "id": 3884,
+                  "nodeType": "Return",
+                  "src": "818:23:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3886,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3875,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3886,
+                  "src": "769:8:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3874,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "769:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:10:15"
+            },
+            "returnParameters": {
+              "id": 3879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3878,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3886,
+                  "src": "802:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3877,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "802:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "801:6:15"
+            },
+            "scope": 3902,
+            "src": "753:95:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3900,
+              "nodeType": "Block",
+              "src": "932:43:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3897,
+                        "name": "_ids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3889,
+                        "src": "963:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3895,
+                        "name": "list",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3820,
+                        "src": "949:4:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ListData_$2977_storage",
+                          "typeString": "struct UintEnumerationLib.ListData storage ref"
+                        }
+                      },
+                      "id": 3896,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "statuses",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3295,
+                      "src": "949:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_ListData_$2977_storage_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_array$_t_bool_$dyn_memory_ptr_$bound_to$_t_struct$_ListData_$2977_storage_ptr_$",
+                        "typeString": "function (struct UintEnumerationLib.ListData storage pointer,uint256[] memory) view returns (bool[] memory)"
+                      }
+                    },
+                    "id": 3898,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "949:19:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                      "typeString": "bool[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 3894,
+                  "id": 3899,
+                  "nodeType": "Return",
+                  "src": "942:26:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3901,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "statuses",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3889,
+                  "name": "_ids",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3901,
+                  "src": "872:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3887,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "872:4:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3888,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "872:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "871:22:15"
+            },
+            "returnParameters": {
+              "id": 3894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3893,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3901,
+                  "src": "917:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3891,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "917:4:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 3892,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "917:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "916:15:15"
+            },
+            "scope": 3902,
+            "src": "854:121:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3903,
+        "src": "201:776:15"
+      }
+    ],
+    "src": "0:978:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-24T11:41:08.830Z",
+  "devdoc": {
+    "author": "Ihor Borysyuk Igor Dulger",
+    "details": "Mock contract to test List library. All docs are into origin library.",
+    "methods": {},
+    "title": "ListMock"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
